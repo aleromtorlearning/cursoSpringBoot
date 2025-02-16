@@ -1,0 +1,45 @@
+/* Estilos personalizados para los formularios y elementos de entrada */
+.nuevo-formulario {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.nuevo-formulario h3 {
+  color: #f48840;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.nuevo-input,
+.nuevo-select,
+.nuevo-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.nuevo-boton {
+  background-color: #f48840;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nuevo-boton:hover {
+  background-color: #fb9857;
+}
+
+/* Desplazar el contenido del body a la derecha */
+.contenedor-principal {
+  margin-left: 40px;
+}

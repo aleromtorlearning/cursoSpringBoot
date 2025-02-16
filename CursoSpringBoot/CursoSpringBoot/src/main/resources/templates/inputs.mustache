@@ -1,0 +1,105 @@
+{{>header}}
+<body>
+<div class="contenedor-principal">
+    <h3>Input de Texto</h3>
+        <form  class="nuevo-formulario" action="/texto" method="post">
+            <p>El texto actual es {{texto}}</p>
+            <input type="text" id="texto" name="texto" value="{{texto}}">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3 class="nuevo-formulario h3">Input de Contraseña</h3>
+        <form class="nuevo-formulario" action="/contraseña" method="post">
+            <p>La contraseña actual es {{contraseña}}</p>
+            <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Input de Número</h3>
+        <form class="nuevo-formulario"  action="/numero" method="post">
+            <p>El número actual es {{numero}}</p>
+            <input type="number" id="numero" name="numero" value="{{numero}}" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Input de Fecha y Hora</h3>
+        <form class="nuevo-formulario" action="/datetime" method="post">
+            <p>La fecha y hora actual es {{fechaHora}}</p>
+            <input type="datetime-local" id="datetime" name="datetime" value="{{fechaHora}}" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Input de Fecha</h3>
+        <form class="nuevo-formulario" action="/fecha" method="post">
+            <p>La fecha actual es {{fecha}}</p>
+            <input type="date" id="fecha" name="fecha" value="{{fecha}}" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Elige una opción</h3>
+        <form class="nuevo-formulario" action="/dropdown" method="post">
+            <p>La opción elegida es {{opcion}}</p>
+            <select name="option" class="nuevo-select">
+                {{#options}}
+                    <option value="{{id}}" {{#selected}}selected{{/selected}}>{{name}}</option>
+                {{/options}}
+            </select>
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Elige una opción</h3>
+        <form class="nuevo-formulario" action="/dropdown" method="post">
+            <p>La opción elegida es {{opcion}}</p>
+            {{#options}}
+                <input type="radio" id="option{{id}}" name="option" value="{{id}}" {{#selected}}checked{{/selected}} class="nuevo-input">
+                <label for="option{{id}}">{{name}}</label><br>
+            {{/options}}
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+
+    <h3>Casilla de Verificación</h3>
+        <form class="nuevo-formulario" action="/checkbox" method="post">
+            <p>Estado actual: {{#checkbox}}Marcado{{/checkbox}}{{^checkbox}}No marcado{{/checkbox}}</p>
+            <input type="checkbox" id="checkbox" name="checkbox" {{#checkbox}}checked{{/checkbox}} class="nuevo-input">
+            <label for="checkbox">Casilla de verificación</label>
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Input de Teléfono</h3>
+        <form class="nuevo-formulario" action="/telefono" method="post">
+            <p>El teléfono actual es {{telefono}}</p>
+            <input type="tel" id="telefono" name="telefono"  placeholder="Introduce tu número de teléfono" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Input de Correo Electrónico</h3>
+        <form class="nuevo-formulario" action="/email" method="post">
+            <p>El correo electrónico actual es {{email}}</p>
+            <input type="email" id="email" name="email"  placeholder="Introduce tu correo electrónico" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Seleccionar Color</h3>
+        <form class="nuevo-formulario" action="/color" method="post">
+            <p>El color actual es {{color}}</p>
+            <input type="color" id="color" name="color" value="{{color}}" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Área de Texto</h3>
+        <form class="nuevo-formulario" action="/textarea" method="post">
+            <p>Texto actual: {{textarea}}</p>
+            <textarea id="textarea" name="textarea" rows="4" cols="50" class="nuevo-textarea"></textarea>
+            <button type="submit" class="nuevo-boton">Enviar</button>
+        </form>
+
+    <h3>Subir un archivo</h3>
+        <form class="nuevo-formulario" action="/archivo" method="post" enctype="multipart/form-data">
+            <p>Archivo subido: {{archivo}}</p>
+            <input type="file" id="archivo" name="archivo" class="nuevo-input">
+            <button type="submit" class="nuevo-boton">Subir archivo</button>
+        </form>
+</div>
+</body>
+{{>footer}}
