@@ -1,5 +1,5 @@
 /* Estilos personalizados para los formularios y elementos de entrada */
-.nuevo-formulario {
+.formulario {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
@@ -7,16 +7,16 @@
   margin-bottom: 20px;
 }
 
-.nuevo-formulario h3 {
+.formulario h3 {
   color: #f48840;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.nuevo-input,
-.nuevo-select,
-.nuevo-textarea {
+.inputs,
+.selects,
+.textareas {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -25,7 +25,7 @@
   font-size: 14px;
 }
 
-.nuevo-boton {
+.botons {
   background-color: #f48840;
   color: white;
   padding: 10px 15px;
@@ -35,11 +35,79 @@
   transition: background 0.3s;
 }
 
-.nuevo-boton:hover {
+.botons:hover {
   background-color: #fb9857;
 }
 
 /* Desplazar el contenido del body a la derecha */
-.contenedor-principal {
+.contenedor {
   margin-left: 40px;
+}
+/* Estilos personalizados para la tabla de productos */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabla th {
+  background-color: #f48840;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para los enlaces de acción */
+.enlace {
+  text-decoration: none;
+  color: #f48840;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.enlace:hover {
+  color: #fb9857;
+}
+
+
+
+
+/* Estilos para listas */
+.lista {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 400px;
+}
+
+.lista li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+.lista li:last-child {
+    border-bottom: none;
+}
+
+.lista li:hover {
+    background-color: #f9f9f9;
 }
