@@ -1,0 +1,33 @@
+{{>header}}
+<body>
+<div class="contenedor">
+    <h3>Gestión de Productos</h3>
+    <form class="formulario"  action="/productos/crear" method="post">
+        <input class="inputs"  type="text" name="nombre" placeholder="Nombre" required>
+        <input class="inputs" type="text" name="descripcion" placeholder="Descripción" required>
+        <input class="inputs" type="number" name="precio" step="0.01" placeholder="Precio" required>
+        <input class="inputs" type="text" name="categoria" placeholder="Categoría" required>
+        <button class="botons mt-3" type="submit">Añadir Producto</button>
+    </form>
+    <h3>Lista de Productos</h3>
+    <table class="tabla">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Eliminar</th>
+        </tr>
+        {{#productos}}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{precio}}</td>
+                <td>{{categoria}}</td>
+                <td><a class="botons" href="/productos/delete/{{nombre}}">Eliminar</a></td>
+            </tr>
+        {{/productos}}
+    </table>
+</div>
+</body>
+{{>footer}}
