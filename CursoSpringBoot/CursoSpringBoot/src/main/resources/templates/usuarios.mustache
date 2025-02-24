@@ -14,17 +14,17 @@
             <tr>
                 <td>{{nombre}}</td>
                 <td>{{email}}</td>
-                <td><a class="botons" href="/usuarios/editar/{{id}}">Editar</a></td>
+                <td><a class="botons" href="/usuarios/{{id}}">Editar</a></td>
                 <!--<td><a class="botons" href="/usuarios/eliminar/{{id}}" onclick="return confirm('¿Seguro que deseas eliminar este usuario?');">Eliminar</a></td>-->
-                <td><form action="/usuarios/eliminar/{{id}}" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar este usuario?');">
-                    <input type="hidden" name="_method" value="DELETE">
+                <td><form action="/usuarios/{{id}}" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar este usuario?');">
+                    <input type="hidden" name="_method" value="delete">
                     <button type="submit" class="botons">Eliminar</button>
                 </form></td>
             </tr>
             {{#esEditando}}
                 <tr>
                     <td colspan="4">
-                        <form class="formulario" action="/usuarios/editar/{{id}}" method="post">
+                        <form class="formulario" action="/usuarios/{{id}}" method="post">
                             <input type="hidden" name="_method" value="PUT">
 
                             <label for="nombre">Nombre: </label>
@@ -52,19 +52,7 @@
         <button class="botons" type="submit">Agregar</button>
     </form>
 
-    {{#usuario}}
-        <h3>Editar usuario</h3>
-        <form class="formulario" action="/usuarios/editar/{{id}}" method="post">
-            <input type="hidden" name="_method" value="PUT">
-            <label for="nombre">Nombre: </label>
-            <input class="inputs" type="text" id="nombre" name="nombre" value="{{nombre}}" required>
 
-            <label for="email">Email: </label>
-            <input class="inputs" type="email" id="email" name="email" value="{{email}}" required>
-
-            <button class="botons" type="submit">Actualizar</button>
-        </form>
-    {{/usuario}}
 
 </div>
 </body>

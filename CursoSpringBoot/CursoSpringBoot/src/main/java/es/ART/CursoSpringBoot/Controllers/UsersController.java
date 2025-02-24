@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-import es.ART.CursoSpringBoot.Controllers.RestController.MainRestController.Usuario;
+import es.ART.CursoSpringBoot.DAL.UserDbManager.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,11 +72,12 @@ public class UsersController {
 //        return "redirect:/usuarios";
 //    }
 
-    @DeleteMapping("/eliminar/{id}")
+    @DeleteMapping("/{id}")
     public String eliminar(@PathVariable int id) {
         try {
             restTemplate.delete(usersUrl + "/" + id);
         } catch (Exception e) {
+            System.err.println("Error al eliminar el usuario, muestra la vista igualmente");
             e.printStackTrace();
         }
         return "redirect:/usuarios";
@@ -84,7 +85,7 @@ public class UsersController {
 
 
 
-    @GetMapping("/editar/{id}")
+    @GetMapping("/{id}")
     public String obtenerParaEditar(@PathVariable int id,  Model model){
         List<Usuario> usuarios=new ArrayList<>();
         try{
@@ -112,7 +113,7 @@ public class UsersController {
         return "usuarios";
     }
 
-    @PutMapping("/editar/{id}")
+    @PutMapping("/{id}")
     public String actualizarUsuario(@PathVariable int id, @RequestParam String nombre, @RequestParam String email) {
         Usuario usuarioActualizado = new Usuario(id, nombre, email);
         HttpHeaders headers = new HttpHeaders();
@@ -126,3 +127,24 @@ public class UsersController {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
