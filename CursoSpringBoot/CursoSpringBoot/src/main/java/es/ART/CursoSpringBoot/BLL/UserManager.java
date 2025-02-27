@@ -1,6 +1,8 @@
 package es.ART.CursoSpringBoot.BLL;
 
 import es.ART.CursoSpringBoot.DAL.UserDbManager;
+import es.ART.CursoSpringBoot.Exceptions.Exceptions.EmailInvalidoException;
+import es.ART.CursoSpringBoot.Exceptions.Exceptions.NullStringException;
 import org.springframework.stereotype.Service;
 import es.ART.CursoSpringBoot.DAL.UserDbManager.Usuario;
 
@@ -18,7 +20,17 @@ public class UserManager {
         return userDbManager.obtenerUsuario();
     }
 
-    public Usuario crearUsuario(Usuario usuario){
+    public Usuario crearUsuario(Usuario usuario) {
+        if(usuario.getEmail()==null || usuario.getNombre()==null){
+            throw new NullStringException("");
+        }
+
+        if(usuario.getEmail().isEmpty()){
+            throw new EmailInvalidoException("");
+        }
+
+
+
         usuario.setNombre(capitalizarIniciales(usuario.getNombre()));
         return userDbManager.crearUsuario(usuario);
     }
