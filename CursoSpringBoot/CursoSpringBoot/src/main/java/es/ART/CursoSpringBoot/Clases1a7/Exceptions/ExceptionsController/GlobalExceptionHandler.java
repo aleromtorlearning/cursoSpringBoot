@@ -1,7 +1,7 @@
-package es.ART.CursoSpringBoot.Exceptions.ExceptionsController;
+package es.ART.CursoSpringBoot.Clases1a7.Exceptions.ExceptionsController;
 
-import es.ART.CursoSpringBoot.Exceptions.Exceptions.EmailInvalidoException;
-import es.ART.CursoSpringBoot.Exceptions.Exceptions.NullStringException;
+import es.ART.CursoSpringBoot.Clases1a7.Exceptions.Exceptions.EmailInvalidoException;
+import es.ART.CursoSpringBoot.Clases1a7.Exceptions.Exceptions.NullStringException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

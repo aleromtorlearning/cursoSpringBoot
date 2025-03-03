@@ -1,10 +1,10 @@
-package es.ART.CursoSpringBoot.Controllers.RestController;
+package es.ART.CursoSpringBoot.Clases1a7.Controllers.RestController;
 
-import es.ART.CursoSpringBoot.BLL.UserManager;
+import es.ART.CursoSpringBoot.Clases1a7.BLL.UserManager;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import es.ART.CursoSpringBoot.DAL.UserDbManager.Usuario;
+import es.ART.CursoSpringBoot.Clases1a7.DAL.UserDbManager.Usuario;
 
 import java.util.*;
 

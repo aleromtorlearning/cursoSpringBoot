@@ -1,4 +1,4 @@
-package es.ART.CursoSpringBoot.Controllers;
+package es.ART.CursoSpringBoot.Clases1a7.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-import es.ART.CursoSpringBoot.DAL.UserDbManager.*;
+import es.ART.CursoSpringBoot.Clases1a7.DAL.UserDbManager.*;
 
 import java.util.ArrayList;
 import java.util.List;

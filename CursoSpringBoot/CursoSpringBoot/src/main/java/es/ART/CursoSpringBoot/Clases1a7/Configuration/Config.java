@@ -1,4 +1,4 @@
-package es.ART.CursoSpringBoot.Configuration;
+package es.ART.CursoSpringBoot.Clases1a7.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

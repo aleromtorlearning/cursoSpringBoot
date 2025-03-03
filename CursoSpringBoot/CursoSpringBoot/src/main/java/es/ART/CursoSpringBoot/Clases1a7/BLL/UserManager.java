@@ -1,10 +1,10 @@
-package es.ART.CursoSpringBoot.BLL;
+package es.ART.CursoSpringBoot.Clases1a7.BLL;
 
-import es.ART.CursoSpringBoot.DAL.UserDbManager;
-import es.ART.CursoSpringBoot.Exceptions.Exceptions.EmailInvalidoException;
-import es.ART.CursoSpringBoot.Exceptions.Exceptions.NullStringException;
+import es.ART.CursoSpringBoot.Clases1a7.DAL.UserDbManager;
+import es.ART.CursoSpringBoot.Clases1a7.Exceptions.Exceptions.EmailInvalidoException;
+import es.ART.CursoSpringBoot.Clases1a7.Exceptions.Exceptions.NullStringException;
 import org.springframework.stereotype.Service;
-import es.ART.CursoSpringBoot.DAL.UserDbManager.Usuario;
+import es.ART.CursoSpringBoot.Clases1a7.DAL.UserDbManager.Usuario;
 
 import java.util.List;
 

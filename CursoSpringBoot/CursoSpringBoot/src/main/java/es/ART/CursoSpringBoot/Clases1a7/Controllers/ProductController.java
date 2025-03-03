@@ -1,4 +1,4 @@
-package es.ART.CursoSpringBoot.Controllers;
+package es.ART.CursoSpringBoot.Clases1a7.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

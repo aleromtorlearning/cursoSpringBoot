@@ -1,6 +1,5 @@
-package es.ART.CursoSpringBoot.DAL;
+package es.ART.CursoSpringBoot.Clases1a7.DAL;
 
-import es.ART.CursoSpringBoot.Controllers.RestController.MainRestController;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
