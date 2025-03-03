@@ -15,9 +15,6 @@ public class Empleado {
     private String puesto;
     private int anyosEnEmpresa;
 
-
-
-
     public Empleado() {}
 
     public Empleado(String nombre, String puesto, int anyosEnEmpresa) {
