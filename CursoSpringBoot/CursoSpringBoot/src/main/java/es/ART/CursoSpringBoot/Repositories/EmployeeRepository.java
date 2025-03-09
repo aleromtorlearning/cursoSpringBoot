@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Empleado, Long> {
-    Optional<Empleado> findByName(String hola);
+    //Optional<Empleado> findByName(String hola);
 }

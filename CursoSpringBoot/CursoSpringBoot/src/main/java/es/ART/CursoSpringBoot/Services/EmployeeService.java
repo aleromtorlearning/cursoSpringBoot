@@ -27,7 +27,7 @@ public class EmployeeService {
     }
 
     public Empleado editar(long id, Empleado entrada) {
-        Optional<Empleado> opcional =repository.findByName("Hola");
+        Optional<Empleado> opcional =repository.findById(id);
         if(opcional.isPresent()){
             Empleado aModificar=opcional.get();
             aModificar.setNombre(entrada.getNombre());
